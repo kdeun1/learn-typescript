@@ -9,11 +9,13 @@ let num: number = 10;
 
 // TS 배열
 let arr: Array<number> = [1,2,3];
-let heroes: Array<string> = ['Capt', 'Thor', 'Hulk', 10]
+// let heroes: Array<string> = ['Capt', 'Thor', 'Hulk', 10]
+let heroes: Array<string> = ['Capt', 'Thor', 'Hulk']
 let items: number[] = [1,2,3];
 
 // TS 튜플
 let address: [string, number] = ['gangnam', 100];
+let address2: [number, number, number] = [1, 100, 3];
 
 // TS 객체
 let obj: object = {};
