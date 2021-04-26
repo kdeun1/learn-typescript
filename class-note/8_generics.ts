@@ -2,6 +2,7 @@
 //   console.log(text);
 //   return text;
 // }
+// logText(); // ERROR, TS2554: Expected 1 arguments, but got 0.
 // logText(10); // 숫자 10
 // logText('하이'); // 문자열 하이
 // logText(true); // 진위값 true
@@ -14,7 +15,7 @@
 
 // function logText(text: string) {
 //   console.log(text);
-//   // text.split('').reverse().join('');
+//   text.split('').reverse().join('');
 //   return text;
 // }
 
@@ -27,16 +28,16 @@
 //   console.log(text);
 //   return text;
 // }
-
+//
 // const a = logText('a');
 // logText(10);
 // const num = logNumber(10);
 // logText(true);
 
-function logText<T>(text: T): T {
-  console.log(text);
-  return text;
-}
+// function logText<T>(text: T): T {
+//   console.log(text);
+//   return text;
+// }
 
 // const str = logText<string>('abc');
 // str.split('');
@@ -77,8 +78,11 @@ function logTextLength<T extends LengthType>(text: T): T {
   text.length;
   return text;
 }
-logTextLength(10);
-logTextLength({ leng: 10 });
+
+// logTextLength('10'); // OK
+// logTextLength(10); // ERROR
+logTextLength({ length: 10, len: 20 }); // OK
+// logTextLength({ leng: 10 }); // ERROR
 
 // 제네릭 타입 제한 3 - keyof
 interface ShoppingItem {
