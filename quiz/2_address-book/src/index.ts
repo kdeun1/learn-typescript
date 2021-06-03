@@ -90,7 +90,7 @@ class AddressBook {
   /* ------------------------------------------------ */
 }
 
-let div = document.querySelector('.container') as HTMLDivElement;
+let div = document.querySelector('div') as HTMLDivElement;
 div.innerText;
 
 // let heroes = [
